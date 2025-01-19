@@ -20,14 +20,13 @@ public:
         for(int r =0;r<nums.size()-1;r++){
             if(nums[r]<nums[r+1]){
                 ind = r;
+                break;
             }
         }        
         if(ind!=-1){
             for(int i=nums.size()-1;i>ind;i--){
                 if(nums[i]>nums[ind]){
-                    int x = nums[i];
-                    nums[i] = nums[ind];
-                    nums[ind] = x;
+                    swap(nums[ind],nums[i]);
                     break;
                 }
             }
